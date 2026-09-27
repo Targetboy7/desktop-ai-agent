@@ -1,26 +1,27 @@
 # Desktop AI Agent
 
-A lightweight desktop AI assistant built with Electron and Claude API. It gives you a floating "Ask & Share" panel for daily work tasks such as summarizing, rewriting, extracting action items, and drafting replies.
+A lightweight desktop AI assistant built with Electron and Claude API, upgraded into a personal work workspace with chat history, prompt presets, and a modern ChatGPT-like layout.
 
 ## Features
 
-- Floating desktop window
+- Floating desktop workspace
+- Personal conversation history stored locally
+- Prompt library for daily tasks
 - Global hotkey: `Ctrl+Shift+A` / `Cmd+Shift+A`
 - Claude API integration
-- Copy result to clipboard
-- Share result via email or Slack
-- Optional text context before asking a question
+- Copy, email, and share actions
+- Local memory and chat flow for daily work
 
 ## Quick start
 
 1. Install Node.js 18+.
-2. Install project dependencies:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Create a `.env` file from the example:
+3. Create `.env` from the example:
 
 ```bash
 cp .env.example .env
@@ -32,7 +33,7 @@ cp .env.example .env
 ANTHROPIC_API_KEY=your_actual_key_here
 ```
 
-5. Start the app:
+5. Run the app:
 
 ```bash
 npm start
@@ -40,34 +41,23 @@ npm start
 
 ## Usage
 
-- Press `Ctrl+Shift+A` (or `Cmd+Shift+A` on macOS) to open/close the floating window.
-- Paste or type context in the first box.
-- Type your prompt in the second box.
-- Click "Ask AI".
-- Copy, email, or share the answer.
+- Press `Ctrl+Shift+A` to open or hide the app.
+- Use the left panel to pick prompt templates.
+- Create a new conversation from the top left.
+- Paste context or select text, then ask for help.
+- Copy, email, or share the generated answer.
 
-## Prompt ideas
+## Included work modes
 
-- Summarize this email.
-- Rewrite this in a professional tone.
-- Extract action items and deadlines.
-- Tell me the main decision in this note.
-- Explain this code in plain English.
+- Summarize
+- Rewrite
+- Extract tasks
+- Explain
+- Draft reply
 
-## Important security note
+## Notes
 
-Do not commit real API keys. Keep them in `.env` or your shell environment, and never check them into Git.
-
-## Repository status
-
-This project is a starter desktop agent for daily work. You can extend it with:
-
-- a tray icon
-- voice input
-- system-level text selection capture
-- local history
-- custom prompts
-- Windows/macOS packaging
+This personal AI workspace stores conversations locally in your user data folder and uses your own Claude API key. It is meant as a desktop personal assistant, not a multi-user team app.
 
 ## License
 

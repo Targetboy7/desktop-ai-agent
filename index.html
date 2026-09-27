@@ -3,41 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desk AI Agent</title>
+    <title>Desktop AI Agent</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="window-bar">
       <div class="drag-region"></div>
-      <button id="close-btn" class="circle-btn close" aria-label="Close">×</button>
+      <button id="close-btn" class="circle-btn" aria-label="Close">×</button>
     </div>
 
-    <div class="app-shell">
-      <header>
-        <h1>Ask & Share</h1>
-      </header>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div>
+            <div class="eyebrow">Workspace</div>
+            <h2>My AI Desk</h2>
+          </div>
+          <button id="new-chat-btn" class="primary small">New</button>
+        </div>
 
-      <div class="status" id="status">Ready</div>
+        <div class="prompt-list" id="prompt-list"></div>
 
-      <label class="field-label" for="context">Context (optional)</label>
-      <textarea id="context" rows="5" placeholder="Paste email, notes, or selected text here..."></textarea>
+        <div class="history-header">Recent chats</div>
+        <div id="conversation-list" class="conversation-list"></div>
+      </aside>
 
-      <label class="field-label" for="prompt">Ask</label>
-      <textarea id="prompt" rows="5" placeholder="Summarize this, rewrite it, extract tasks, or ask a question..."></textarea>
+      <main class="chat-panel">
+        <div class="topbar">
+          <div>
+            <div class="eyebrow">Personal workspace</div>
+            <h1 id="chat-title">New chat</h1>
+          </div>
+          <div class="topbar-actions">
+            <button id="copy-btn" class="secondary small">Copy</button>
+            <button id="email-btn" class="secondary small">Email</button>
+            <button id="share-btn" class="secondary small">Share</button>
+          </div>
+        </div>
 
-      <div class="actions">
-        <button id="ask-btn" class="primary">Ask AI</button>
-        <button id="clear-btn" class="secondary">Clear</button>
-      </div>
+        <div id="chat-window" class="chat-window"></div>
 
-      <label class="field-label" for="answer">Answer</label>
-      <textarea id="answer" rows="10" readonly placeholder="Your answer will appear here..."></textarea>
-
-      <div class="share-actions">
-        <button id="copy-btn" class="secondary">Copy</button>
-        <button id="email-btn" class="secondary">Email</button>
-        <button id="slack-btn" class="secondary">Slack</button>
-      </div>
+        <div class="composer">
+          <div class="composer-row">
+            <textarea id="context" rows="3" placeholder="Paste context, email, notes, or selected text..."></textarea>
+          </div>
+          <div class="composer-row input-row">
+            <textarea id="prompt" rows="3" placeholder="Ask anything... summarize, rewrite, explain, draft, plan..."></textarea>
+            <button id="ask-btn" class="primary">Send</button>
+          </div>
+          <div class="status-row">
+            <span id="status">Ready</span>
+            <button id="clear-btn" class="secondary small">Clear</button>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="renderer.js"></script>

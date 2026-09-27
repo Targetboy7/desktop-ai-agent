@@ -1,7 +1,7 @@
 {
   "name": "desktop-ai-agent",
   "version": "1.0.0",
-  "description": "Desktop AI agent with Claude API integration and Ask & Share workflow",
+  "description": "Personal desktop AI workspace with local history and Claude integration",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -16,13 +16,16 @@
     "claude",
     "desktop",
     "assistant",
-    "productivity"
+    "productivity",
+    "chat",
+    "workspace"
   ],
   "author": "Targetboy7",
   "license": "MIT",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.4.0",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "electron": "^31.4.0",
