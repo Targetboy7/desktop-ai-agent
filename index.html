@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desk AI Agent</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="window-bar">
+      <div class="drag-region"></div>
+      <button id="close-btn" class="circle-btn close" aria-label="Close">×</button>
+    </div>
+
+    <div class="app-shell">
+      <header>
+        <h1>Ask & Share</h1>
+      </header>
+
+      <div class="status" id="status">Ready</div>
+
+      <label class="field-label" for="context">Context (optional)</label>
+      <textarea id="context" rows="5" placeholder="Paste email, notes, or selected text here..."></textarea>
+
+      <label class="field-label" for="prompt">Ask</label>
+      <textarea id="prompt" rows="5" placeholder="Summarize this, rewrite it, extract tasks, or ask a question..."></textarea>
+
+      <div class="actions">
+        <button id="ask-btn" class="primary">Ask AI</button>
+        <button id="clear-btn" class="secondary">Clear</button>
+      </div>
+
+      <label class="field-label" for="answer">Answer</label>
+      <textarea id="answer" rows="10" readonly placeholder="Your answer will appear here..."></textarea>
+
+      <div class="share-actions">
+        <button id="copy-btn" class="secondary">Copy</button>
+        <button id="email-btn" class="secondary">Email</button>
+        <button id="slack-btn" class="secondary">Slack</button>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "desktop-ai-agent",
+  "version": "1.0.0",
+  "description": "Desktop AI agent with Claude API integration and Ask & Share workflow",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "ai",
+    "claude",
+    "desktop",
+    "assistant",
+    "productivity"
+  ],
+  "author": "Targetboy7",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "electron": "^31.4.0"
+  }
+}
